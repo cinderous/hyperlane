@@ -12,10 +12,7 @@ public enum ModItemTiers implements IItemTier {
     // int harvestLevel, int maxUses, float efficiency, float attackDamage, int
     // enchantability, Supplier<Ingredient> repairMaterial
     //same harvest tier as wood
-    SHARPENED_CINDERITE_ROCK_CONFIG(0, 30, 2.0F, 0.0F, 15, () -> {
 
-        return Ingredient.fromItems(RegistryHandler.SHARPENED_CINDERITE_ROCK.get());
-    }),
     HYPHINITY_PICKAXE_CONFIG(3, 200, 100.0F, 0.0F, 15, () -> {
         return Ingredient.fromItems(RegistryHandler.HYPHINITY_PICKAXE.get());
     }),

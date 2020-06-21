@@ -18,7 +18,7 @@ public class DimensionalBridgeBuilder extends Item {
     public Vec3d rayvec = null;
 
     public DimensionalBridgeBuilder() {
-        super(new Item.Properties().group(Hyperlane.TAB));
+        super(new Item.Properties().group(Hyperlane.HYPERLANE_TAB));
     }
 
     @Override

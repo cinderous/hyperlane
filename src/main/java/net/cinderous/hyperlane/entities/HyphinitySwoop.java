@@ -145,9 +145,6 @@ public class HyphinitySwoop extends CreatureEntity implements IFlyingAnimal {
         this.setGlowing(true);
     }
 
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return RegistryHandler.AMBIENT.get();
-    }
+
 
 }

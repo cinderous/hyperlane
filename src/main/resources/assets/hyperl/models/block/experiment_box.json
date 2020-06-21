@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "hyperl:blocks/experiment_box_side",
-    "front": "hyperl:blocks/experiment_box_front",
-    "side": "hyperl:blocks/experiment_box_side"
-  }
-}

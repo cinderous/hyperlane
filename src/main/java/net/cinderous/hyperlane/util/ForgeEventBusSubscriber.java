@@ -12,10 +12,7 @@ public class ForgeEventBusSubscriber {
 
     @SubscribeEvent
     public static void registerDimensions(final RegisterDimensionsEvent event) {
-        if (DimensionType.byName(Hyperlane.CINDERBANE_DIM_TYPE) == null) {
-            DimensionManager.registerDimension(Hyperlane.CINDERBANE_DIM_TYPE, RegistryHandler.CINDERBANE_DIM.get(), null,
-                    true);
-        }
+
         if (DimensionType.byName(Hyperlane.HYPERLANE_DIM_TYPE) == null) {
             DimensionManager.registerDimension(Hyperlane.HYPERLANE_DIM_TYPE, RegistryHandler.HYPERLANE_DIM.get(), null,
                     true);

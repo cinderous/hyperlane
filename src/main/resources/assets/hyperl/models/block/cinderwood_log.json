@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "hyperl:blocks/cinderwood_log_top",
-    "side": "hyperl:blocks/cinderwood_log"
-  }
-}

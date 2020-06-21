@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "hyperl:cinderwood_log",
     "hyperl:hyphinity_log"
   ]
 }

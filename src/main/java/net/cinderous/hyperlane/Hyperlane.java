@@ -1,6 +1,5 @@
 package net.cinderous.hyperlane;
 
-import net.cinderous.hyperlane.entities.Cinderling;
 import net.cinderous.hyperlane.entities.HyphinitySwoop;
 import net.cinderous.hyperlane.util.RegistryHandler;
 import net.cinderous.hyperlane.world.gen.HyperlaneOreGen;
@@ -60,16 +59,11 @@ public class Hyperlane
     {
 
 
-        Cinderling.registerPlacementTypes();
+
         HyphinitySwoop.registerPlacementTypes();
 
         registerEntityWorldSpawn(RegistryHandler.HYPHINITY_WISP.get(), 200, 1,1,
                 RegistryHandler.HYPERLANE_DRIFTS.get());
-        registerEntityWorldSpawn(EntityType.CREEPER, 1, 2, 6,
-                RegistryHandler.CINDERBANE.get());
-        registerEntityWorldSpawn(RegistryHandler.CINDERLING.get(), 50, 2, 6,
-                RegistryHandler.CINDERBANE.get());
-
 
 
         DeferredWorkQueue.runLater(HyperlaneOreGen::generateOre);
@@ -90,13 +84,7 @@ public class Hyperlane
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
-    public static final ItemGroup TAB = new ItemGroup("hyperlTab") {
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.CINDERIUM_INGOT.get());
-        }
 
-    };
     public static final ItemGroup HYPERLANE_TAB = new ItemGroup("hyperlaneTab") {
         @Override
         public ItemStack createIcon() {

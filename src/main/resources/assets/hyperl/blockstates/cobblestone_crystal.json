@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "hyperl:block/cobblestone_crystal" },
-    "facing=south": { "model": "hyperl:block/cobblestone_crystal", "y": 180 },
-    "facing=west":  { "model": "hyperl:block/cobblestone_crystal", "y": 270 },
-    "facing=east":  { "model": "hyperl:block/cobblestone_crystal", "y": 90 }
-  }
-}

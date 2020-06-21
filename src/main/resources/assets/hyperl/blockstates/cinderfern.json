@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "half=lower": { "model": "hyperl:block/cinderfern_bottom" },
-    "half=upper":    { "model": "hyperl:block/cinderfern_top" }
-  }
-}
