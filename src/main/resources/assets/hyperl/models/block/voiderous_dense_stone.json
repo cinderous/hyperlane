@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "hyperl:blocks/voiderous_dense_stone"
+  }
+}

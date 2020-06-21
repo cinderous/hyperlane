@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hyperl:cinderite_rock"
+    },
+    {
+      "item": "hyperl:cinderite_rock"
+    }
+  ],
+  "result": {
+    "item": "hyperl:sharpened_cinderite_rock"
+  }
+}

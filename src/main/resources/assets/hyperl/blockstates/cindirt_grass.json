@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      { "model": "hyperl:block/cindirt_grass" },
+      { "model": "hyperl:block/cindirt_grass", "y": 90 },
+      { "model": "hyperl:block/cindirt_grass", "y": 180 },
+      { "model": "hyperl:block/cindirt_grass", "y": 270 }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "hyperl:blocks/voiderous_log_top",
+    "side": "hyperl:blocks/voiderous_log"
+  }
+}

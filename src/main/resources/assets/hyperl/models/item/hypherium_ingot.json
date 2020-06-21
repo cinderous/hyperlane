@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "hyperl:items/hypherium_ingot"
+  }
+}

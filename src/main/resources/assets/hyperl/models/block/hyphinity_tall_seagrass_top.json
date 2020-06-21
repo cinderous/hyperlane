@@ -1,0 +1,7 @@
+{
+  "parent": "block/seagrass",
+  "textures": {
+    "seagrass": "hyperl:blocks/hyphinity_tall_seagrass_top",
+    "particle": "hyperl:blocks/hyphinity_tall_seagrass_top"
+  }
+}

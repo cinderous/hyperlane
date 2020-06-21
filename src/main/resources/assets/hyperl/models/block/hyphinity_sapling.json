@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "hyperl:blocks/hyphinity_sapling"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "hyperl:cinderflux"
+    }
+  ],
+  "result": {
+    "item": "hyperl:cinderflame_torch",
+    "count": 4
+  }
+}

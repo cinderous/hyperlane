@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "hyperl:cinderwood_log"
+    },
+    {
+      "item": "hyperl:sharpened_cinderite_rock"
+    }
+  ],
+  "result": {
+    "item": "hyperl:cinderwood_planks",
+    "count": 4
+  }
+}

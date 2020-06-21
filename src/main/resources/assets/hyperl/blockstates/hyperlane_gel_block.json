@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "hyperl:block/hyperlane_gel_block" }
+  }
+}

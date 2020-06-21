@@ -1,0 +1,7 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "particle": "hyperl:blocks/hyphinity_kelp",
+    "cross": "hyperl:blocks/hyphinity_kelp"
+  }
+}

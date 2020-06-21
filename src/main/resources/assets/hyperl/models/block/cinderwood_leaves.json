@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "hyperl:blocks/cinderwood_leaves"
+  }
+}

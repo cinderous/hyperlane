@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sticks",
+  "ingredients": [
+    {
+      "item": "hyperl:cinderwood_planks"
+    },
+    {
+      "item": "hyperl:sharpened_cinderite_rock"
+    }
+  ],
+  "result": {
+    "item": "hyperl:cinderwood_stick",
+    "count": 2
+  }
+}

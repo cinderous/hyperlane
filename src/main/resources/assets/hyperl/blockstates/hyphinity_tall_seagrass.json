@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "hyperl:block/hyphinity_tall_seagrass_bottom" },
+    "half=upper":    { "model": "hyperl:block/hyphinity_tall_seagrass_top" }
+  }
+}

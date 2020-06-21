@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "hyperl:block/cinderite_rock" },
+    "facing=south": { "model": "hyperl:block/cinderite_rock", "y": 180 },
+    "facing=west":  { "model": "hyperl:block/cinderite_rock", "y": 270 },
+    "facing=east":  { "model": "hyperl:block/cinderite_rock", "y": 90 }
+  }
+}
