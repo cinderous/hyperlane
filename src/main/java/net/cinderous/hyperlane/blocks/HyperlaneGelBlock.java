@@ -12,9 +12,9 @@ public class HyperlaneGelBlock extends Block {
                 .hardnessAndResistance(0.5f,0.5f)
                 .sound(SoundType.SNOW)
                 .doesNotBlockMovement()
-                .slipperiness(2.0f)
-                .speedFactor(2.0f)
-                .jumpFactor(1.0f)
+                .slipperiness(5.0f)
+                .speedFactor(10.0f)
+                .jumpFactor(2.0f)
                 .harvestTool(ToolType.SHOVEL)
         );
     }

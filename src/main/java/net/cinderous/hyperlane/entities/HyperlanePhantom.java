@@ -99,6 +99,7 @@ public class HyperlanePhantom extends AnimalEntity {
         super.registerAttributes();
         this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(16.0D);
         this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.23D);
+        this.getSpeedFactor();
     }
 
     @OnlyIn(Dist.CLIENT)

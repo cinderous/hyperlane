@@ -30,7 +30,7 @@ public class HyperlaneStaff  extends Item {
         if (!worldIn.isRemote) {
 
             if (worldIn.dimension.getType() == DimensionType.byName(Hyperlane.HYPERLANE_DIM_TYPE)) {
-                playerIn.addPotionEffect(new EffectInstance(RegistryHandler.HYPERLANE_EFFECT.get()));
+                //playerIn.addPotionEffect(new EffectInstance(RegistryHandler.HYPERLANE_EFFECT.get()));
                 playerIn.changeDimension(DimensionType.OVERWORLD, tp);
             } else {
                 //playerIn.removePotionEffect(RegistryHandler.HYPERLANE_EFFECT.get());

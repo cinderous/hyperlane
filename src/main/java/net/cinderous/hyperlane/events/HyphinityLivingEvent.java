@@ -2,9 +2,12 @@ package net.cinderous.hyperlane.events;
 
 import net.cinderous.hyperlane.Hyperlane;
 import net.cinderous.hyperlane.util.RegistryHandler;
+import net.cinderous.hyperlane.world.HyperlaneTier1Teleport;
 import net.cinderous.hyperlane.world.WaterTeleporter;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionType;
@@ -29,24 +32,25 @@ public class HyphinityLivingEvent {
 
                     if (livingEntity.getActivePotionEffect(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get()) != null) {
                         tick++;
-                        if (tick == 2) {
+                        if (tick == 1) {
                             BlockPos pos = livingEntity.getPosition();
                             if (world.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()) {
-                                livingEntity.addVelocity(0, 0.001D, 0);
+                                livingEntity.addVelocity(0, 0.05D, 0);
                             }
                             tick = 0;
                         }
 //
                     }
-                } else if (!livingEntity.isPotionActive(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get()) && !world.isRemote && !isSickWithGravity) {
-                    //the following line works in other items/blocks to apply the effect, why doesnt it work in this event?
-
-                  //livingEntity.addPotionEffect(new EffectInstance(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get().getEffect(), 200, 1));
-                    //livingEntity.addPotionEffect(new EffectInstance(Effects.SPEED, 200, 1));
-                   //isSickWithGravity = true;
                 }
+//                else if (!livingEntity.isPotionActive(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get()) && !world.isRemote && !isSickWithGravity && livingEntity instanceof ServerPlayerEntity) {
+//
+//                    isSickWithGravity = true;
+//                    livingEntity.addPotionEffect(new EffectInstance(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get().getEffect(), 4320000, 1));
+//
+//
+//                }
 
-                if(livingEntity.getPosition().getY() == 1) {
+                if(livingEntity.getPosition().getY() <= 1) {
 
                     if (!world.isRemote) {
                         WaterTeleporter tp = new WaterTeleporter(livingEntity.getPosition());
@@ -55,12 +59,21 @@ public class HyphinityLivingEvent {
 
                     }
                 }
+
+            if(livingEntity.getPosition().getY() >= 250) {
+
+                if (!world.isRemote) {
+                    HyperlaneTier1Teleport tp = new HyperlaneTier1Teleport(livingEntity.getPosition(), RegistryHandler.VOIDEROUS_MUCK.get());
+                    livingEntity.changeDimension(DimensionType.byName(Hyperlane.HYPERLANE_DIM_TYPE), tp);
+                }
+
+            }
+        }
             }
 
 
         }
 
-    }
 
 
 

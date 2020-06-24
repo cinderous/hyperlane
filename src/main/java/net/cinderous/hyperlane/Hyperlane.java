@@ -2,6 +2,7 @@ package net.cinderous.hyperlane;
 
 import net.cinderous.hyperlane.entities.HyphinitySwoop;
 import net.cinderous.hyperlane.util.RegistryHandler;
+import net.cinderous.hyperlane.util.packethandler.MyMessage;
 import net.cinderous.hyperlane.world.gen.HyperlaneOreGen;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemGroup;
@@ -16,6 +17,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.network.NetworkRegistry;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,6 +27,19 @@ import org.apache.logging.log4j.Logger;
 @Mod.EventBusSubscriber(modid = Hyperlane.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Hyperlane
 {
+
+
+    public static final String NETWORK_PROTOCOL = "2";
+
+    public static final SimpleChannel INSTANCE = NetworkRegistry.ChannelBuilder.named(new ResourceLocation(Hyperlane.MOD_ID, "net"))
+
+            .networkProtocolVersion(() -> NETWORK_PROTOCOL)
+
+            .clientAcceptedVersions(NETWORK_PROTOCOL::equals)
+
+            .serverAcceptedVersions(NETWORK_PROTOCOL::equals)
+
+            .simpleChannel();
     //public static CommonProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new CommonProxy());
 
 //    @ObjectHolder("packedup:container")
@@ -46,12 +62,28 @@ public class Hyperlane
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        setupMessages();
+
         RegistryHandler.init();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+
     }
-//    @SubscribeEvent
+
+    public void setupMessages(){
+
+        INSTANCE.messageBuilder(MyMessage.class, 0)
+
+                .encoder(MyMessage::serialize).decoder(MyMessage::deserialize)
+
+                .consumer(MyMessage::handle)
+
+                .add();
+
+    }
+    //    @SubscribeEvent
 //    public static void onContainerRegistry(final RegistryEvent.Register<ContainerType<?>> e){
 //        e.getRegistry().register(IForgeContainerType.create((windowId, inv, data) -> new DimensionalBridgeBuilderContainer(windowId,data.readInt(), inv)).setRegistryName("dimensional_bridge_builder_container"));
 //    }
