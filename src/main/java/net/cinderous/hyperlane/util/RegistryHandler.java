@@ -101,6 +101,8 @@ public class RegistryHandler {
 
 
         //hyperlane items
+    public static final RegistryObject<Item> HYPERLANE_DEV = ITEMS.register("hyperlane_dev", HyperlaneDev::new);
+
     public static final RegistryObject<Item> HYPERLANE_STAFF = ITEMS.register("hyperlane_staff", HyperlaneStaff::new);
     public static final RegistryObject<Item> HYPHINITY_WISP_INJECTOR = ITEMS.register("hyphinity_wisp_injector", HyphinityWispInjector::new);
     public static final RegistryObject<Item> HYPERLANE_GEL_RESIDUE = ITEMS.register("hyperlane_gel_residue", HyperlaneItemBase::new);
@@ -144,9 +146,11 @@ public class RegistryHandler {
 
     //blocks
     public static final RegistryObject<Block> HYPERLANE_GEL_BLOCK = BLOCKS.register("hyperlane_gel_block", HyperlaneGelBlock::new);
-
-    public static final RegistryObject<SlabBlock> HYPERLANE_GEL_SLAB = BLOCKS.register("hyperlane_gel_slab",
-            () -> new SlabBlock(Block.Properties.from(RegistryHandler.HYPERLANE_GEL_BLOCK.get())));
+  //  public static final RegistryObject<HyperlaneGelBlock> HYPERLANE_GEL_SLAB = BLOCKS.register("hyperlane_gel_block", HyperlaneGelBlock::new);
+//    public static final RegistryObject<SlabBlock> HYPERLANE_GEL_SLAB = BLOCKS.register("hyperlane_gel_slab",
+//            () -> new SlabBlock(Block.Properties.from(RegistryHandler.HYPERLANE_GEL_BLOCK.get())));
+    public static final RegistryObject<Block> HYPERLANE_GEL_SLAB = BLOCKS.register("hyperlane_gel_slab",
+        () -> new HyperlaneGelSlab(Block.Properties.from(RegistryHandler.HYPERLANE_GEL_BLOCK.get())));
 
     public static final RegistryObject<Block> HYPERLANE_GRAVEL = BLOCKS.register("hyperlane_gravel", HyperlaneGravel::new);
 
@@ -294,6 +298,10 @@ public class RegistryHandler {
     public static final RegistryObject<TileEntityType<VoiderousTreeBuilderBlockTileEntity>> VOIDEROUS_TREE_BUILDER_BLOCK_TILE_ENTITY = TILE_ENTITY_TYPES
             .register("voiderous_tree_builder_block", () -> TileEntityType.Builder
                     .create(VoiderousTreeBuilderBlockTileEntity::new, RegistryHandler.VOIDEROUS_TREE_BUILDER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<TileEntityType<HyperlaneGelSlabTileEntity>> HYPERLANE_GEL_SLAB_TILE_ENTITY = TILE_ENTITY_TYPES
+            .register("hyperlane_gel_slab", () -> TileEntityType.Builder
+                    .create(HyperlaneGelSlabTileEntity::new, RegistryHandler.HYPERLANE_GEL_SLAB.get()).build(null));
 
 
 

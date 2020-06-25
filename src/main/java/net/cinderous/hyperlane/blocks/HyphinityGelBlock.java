@@ -11,8 +11,7 @@ public class HyphinityGelBlock  extends Block {
         super(Block.Properties.create(Material.EARTH)
                 .hardnessAndResistance(0.5f,0.5f)
                 .sound(SoundType.SNOW)
-                .doesNotBlockMovement()
-                .slipperiness(2.0f)
+
                 .speedFactor(2.0f)
                 .jumpFactor(1.0f)
                 .harvestTool(ToolType.SHOVEL)

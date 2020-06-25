@@ -4,6 +4,7 @@ import net.cinderous.hyperlane.Hyperlane;
 import net.cinderous.hyperlane.util.RegistryHandler;
 import net.cinderous.hyperlane.util.packethandler.MyMessage;
 import net.cinderous.hyperlane.world.HyperlaneTier1Teleport;
+import net.cinderous.hyperlane.world.HyphinityTeleporter;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
@@ -104,7 +105,7 @@ public class HyperlaneLivingEvent {
         World world = livingEntity.getEntityWorld();
 
         if (speedAchieved && !world.isRemote) {
-            HyperlaneTier1Teleport tp = new HyperlaneTier1Teleport(livingEntity.getPosition(), RegistryHandler.VOIDEROUS_MUCK.get().getDefaultState().getBlock());
+            HyphinityTeleporter tp = new HyphinityTeleporter(livingEntity.getPosition(), RegistryHandler.VOIDEROUS_MUCK.get().getDefaultState().getBlock());
             livingEntity.changeDimension(DimensionType.byName(Hyperlane.HYPHINITY_DIM_TYPE), tp);
         }
         return true;

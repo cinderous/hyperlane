@@ -41,7 +41,7 @@ public class HyphinityChangeDimensionEvent {
                 if(!isHyperlaned) {
                     if(world.getDimension().getType() == DimensionType.byName(Hyperlane.HYPERLANE_DIM_TYPE)) {
                         isHyperlaned = true;
-                        livingEntity.addPotionEffect(new EffectInstance(RegistryHandler.HYPERLANE_EFFECT.get().getEffect(), 2000));
+                        livingEntity.addPotionEffect(new EffectInstance(RegistryHandler.HYPERLANE_EFFECT.get().getEffect(), 1728000));
 
                     }
                 }
@@ -57,7 +57,7 @@ public class HyphinityChangeDimensionEvent {
                 if(!isSickWithGravity) {
                     if(world.getDimension().getType() == DimensionType.byName(Hyperlane.HYPHINITY_DIM_TYPE)) {
                         isSickWithGravity = true;
-                        livingEntity.addPotionEffect(new EffectInstance(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get().getEffect(), 2000 ));
+                        livingEntity.addPotionEffect(new EffectInstance(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get().getEffect(), 1728000 ));
 
                     }
                 }
