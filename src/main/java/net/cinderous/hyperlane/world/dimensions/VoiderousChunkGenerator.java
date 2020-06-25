@@ -21,7 +21,7 @@ public class VoiderousChunkGenerator   extends NoiseChunkGenerator<VoiderousGenS
         int i = 64;
         int j = -3000;
         //this.calcNoiseColumn(noiseColumn, noiseX, noiseZ, 3368.824D, 2684.412D, 17.110300000000002D, 4.277575000000001D, 64, -3000);
-        this.calcNoiseColumn(noiseColumn, noiseX, noiseZ, 1368.824D, 684.412D, 17.110300000000002D, 4.277575000000001D, 64, -3000);
+        this.calcNoiseColumn(noiseColumn, noiseX, noiseZ, 1368.824D, 684.412D, 17.110300000000002D, 4.277575000000001D, 200, -4000);
     }
 
     protected double[] getBiomeNoiseColumn(int noiseX, int noiseZ) {
@@ -41,11 +41,11 @@ public class VoiderousChunkGenerator   extends NoiseChunkGenerator<VoiderousGenS
     }
 
     public int getGroundHeight() {
-        return 50;
+        return 200;
     }
 
     public int getSeaLevel() {
-        return 20;
+        return 10;
     }
 }
 
