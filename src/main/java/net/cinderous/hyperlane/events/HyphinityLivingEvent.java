@@ -35,7 +35,7 @@ public class HyphinityLivingEvent {
                         if (tick == 1) {
                             BlockPos pos = livingEntity.getPosition();
                             if (world.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()) {
-                                livingEntity.addVelocity(0, 0.05D, 0);
+                                livingEntity.addVelocity(0, 0.01D, 0);
                             }
                             tick = 0;
                         }

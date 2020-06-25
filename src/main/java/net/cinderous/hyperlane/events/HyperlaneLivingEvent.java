@@ -85,7 +85,7 @@ public class HyperlaneLivingEvent {
                 if (world.getBlockState(livingEntity.getPosition().down()) == Blocks.WATER.getDefaultState()) {
                     tick++;
                     Hyperlane.LOGGER.info(tick);
-                    if (tick == 50) {
+                    if (tick == 75) {
                         speedAchieved = true;
                         BlockPos playerPos = livingEntity.getPosition();
                         MyMessage message = (new MyMessage(playerPos ,speedAchieved));

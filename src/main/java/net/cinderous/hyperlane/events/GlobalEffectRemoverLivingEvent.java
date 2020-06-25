@@ -8,6 +8,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionType;
@@ -21,7 +23,7 @@ public class GlobalEffectRemoverLivingEvent {
     @SubscribeEvent
     public static void GlobalEffectRemoverLivingEvent(LivingEvent event) {
 
-        if (event.getEntityLiving() != null) {
+        if (event.getEntityLiving() != null && event.getEntityLiving() instanceof PlayerEntity) {
             LivingEntity livingEntity = event.getEntityLiving();
             World world = livingEntity.getEntityWorld();
             if(livingEntity.getActivePotionEffect(RegistryHandler.HYPHINITY_SICKNESS_GRAVITY.get()) != null && world.getDimension().getType() != DimensionType.byName(Hyperlane.HYPHINITY_DIM_TYPE) ) {
@@ -29,6 +31,7 @@ public class GlobalEffectRemoverLivingEvent {
             }
             if(livingEntity.getActivePotionEffect(RegistryHandler.HYPERLANE_EFFECT.get()) != null && world.getDimension().getType() != DimensionType.byName(Hyperlane.HYPERLANE_DIM_TYPE) ) {
                 livingEntity.removeActivePotionEffect(RegistryHandler.HYPERLANE_EFFECT.get());
+                livingEntity.setGlowing(false);
             }
         }
     }
