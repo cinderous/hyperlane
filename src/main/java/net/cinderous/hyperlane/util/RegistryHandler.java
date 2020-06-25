@@ -104,6 +104,10 @@ public class RegistryHandler {
     public static final RegistryObject<Item> HYPERLANE_DEV = ITEMS.register("hyperlane_dev", HyperlaneDev::new);
 
     public static final RegistryObject<Item> HYPERLANE_STAFF = ITEMS.register("hyperlane_staff", HyperlaneStaff::new);
+
+    public static final RegistryObject<Item> HYPHINITY_WISP_JAR = ITEMS.register("hyphinity_wisp_jar", HyperlaneItemBase::new);
+    public static final RegistryObject<Item> HYPHINITY_WISP_JAR_EMPTY = ITEMS.register("hyphinity_wisp_jar_empty", HyperlaneItemBase::new);
+
     public static final RegistryObject<Item> HYPHINITY_WISP_INJECTOR = ITEMS.register("hyphinity_wisp_injector", HyphinityWispInjector::new);
     public static final RegistryObject<Item> HYPERLANE_GEL_RESIDUE = ITEMS.register("hyperlane_gel_residue", HyperlaneItemBase::new);
     public static final RegistryObject<Item> HYPHERIUM_INGOT = ITEMS.register("hypherium_ingot", HyperlaneItemBase::new);

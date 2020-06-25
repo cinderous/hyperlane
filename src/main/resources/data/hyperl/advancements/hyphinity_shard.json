@@ -1,0 +1,35 @@
+{
+  "parent": "hyperl:hyperlane_staff",
+  "display": {
+    "icon": {
+      "item": "hyperl:hyphinity_shard"
+    },
+    "title": {
+      "translate": "advancements.hyperl.hyphinity_shard.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.hyphinity_shard.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hyphinity_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hyperl:hyphinity_shard"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hyphinity_shard"
+    ]
+  ]
+}

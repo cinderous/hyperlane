@@ -1,0 +1,35 @@
+{
+  "parent": "hyperl:root",
+  "display": {
+    "icon": {
+      "item": "hyperl:dimensional_bridge_builder"
+    },
+    "title": {
+      "translate": "advancements.hyperl.dimensional_bridge_builder.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.dimensional_bridge_builder.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dimensional_bridge_builder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hyperl:dimensional_bridge_builder"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dimensional_bridge_builder"
+    ]
+  ]
+}

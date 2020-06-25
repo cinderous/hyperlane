@@ -4,5 +4,25 @@
   "item.hyperl.cinderium_ingot":  "Cinderium Ingot",
   "item.hyperl.cinderite_dust":  "Cinderrite Dust",
   "item.hyperl.cinderite_stone":  "Cinderrite Stone",
-  "item.hyperl.cinderite_mulch":  "Cinderrite Mulch"
+  "item.hyperl.cinderite_mulch":  "Cinderrite Mulch",
+
+  "itemGroup.hyperl": "Hyperlane",
+
+
+  "advancements.hyperl.hyperlane.description": "This land feels hyperactive.",
+  "advancements.hyperl.hyperlane_gel_residue.title": "Strange Residue",
+  "advancements.hyperl.hyperlane_gel_residue.description": "This is leftover from collecting the surface gel of this biome.",
+  "advancements.hyperl.hyperlane_staff.title": "Hyperlane Dimension",
+  "advancements.hyperl.hyperlane_staff.description": "Where does it take me?",
+  "advancements.hyperl.hyphinity.title": "Hyphinity Dimension",
+  "advancements.hyperl.hyphinity.description": "Energy builds up within you while moving through the air quickly.",
+  "advancements.hyperl.hyphinity_shard.title": "Hyphinity Shard",
+  "advancements.hyperl.hyphinity_shard.description": "From the depths bright lights illuminate something mysterious.",
+  "advancements.hyperl.hyphinity_boots.title": "Hyphinity Boots",
+  "advancements.hyperl.hyphinity_boots.description": "Feels like a force is pulling these to the ground.",
+  "advancements.hyperl.voiderous.title": "Voiderous Dimension",
+  "advancements.hyperl.voiderous.description": "What lurks below?",
+  "advancements.hyperl.dimensional_bridge_builder.title": "Dimensional Bridge Builder",
+  "advancements.hyperl.dimensional_bridge_builder.description": "Used to place blocks below you as you walk forward."
+
 }

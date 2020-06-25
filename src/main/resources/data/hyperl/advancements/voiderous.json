@@ -1,0 +1,31 @@
+{
+  "parent": "hyperl:hyphinity",
+  "display": {
+    "icon": {
+      "item": "hyperl:voiderous_muck"
+    },
+    "title": {
+      "translate": "advancements.hyperl.voiderous.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.voiderous.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "entered_voiderous": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "hyperl:voiderous"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_voiderous"
+    ]
+  ]
+}

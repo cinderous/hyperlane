@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "hyperl:hyperlane_gel_block"
+    },
+    "title": {
+      "translate": "itemGroup.hyperl"
+    },
+    "description": {
+      "translate": "advancements.hyperl.hyperlane.description"
+    },
+    "background": "hyperl:textures/gui/advancements.png"
+  },
+  "criteria": {
+    "entered_hyperlane_drifts": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "hyperl:hyperlane_drifts"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_hyperlane_drifts"
+    ]
+  ]
+}

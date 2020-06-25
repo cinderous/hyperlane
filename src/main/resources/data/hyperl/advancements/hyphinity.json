@@ -1,0 +1,31 @@
+{
+  "parent": "hyperl:hyperlane_staff",
+  "display": {
+    "icon": {
+      "item": "hyperl:hyphinity_gel_block"
+    },
+    "title": {
+      "translate": "advancements.hyperl.hyphinity.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.hyphinity.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "entered_hyphinity": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "hyperl:hyphinity"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_hyphinity"
+    ]
+  ]
+}

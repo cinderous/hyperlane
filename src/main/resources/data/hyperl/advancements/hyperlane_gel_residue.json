@@ -1,0 +1,35 @@
+{
+  "parent": "hyperl:root",
+  "display": {
+    "icon": {
+      "item": "hyperl:hyperlane_gel_residue"
+    },
+    "title": {
+      "translate": "advancements.hyperl.hyperlane_gel_residue.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.hyperlane_gel_residue.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hyperlane_gel_residue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hyperl:hyperlane_gel_residue"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hyperlane_gel_residue"
+    ]
+  ]
+}

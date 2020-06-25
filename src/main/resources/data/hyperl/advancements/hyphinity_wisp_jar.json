@@ -1,0 +1,35 @@
+{
+  "parent": "hyperl:hyphinity_shard",
+  "display": {
+    "icon": {
+      "item": "hyperl:hyphinity_wisp_jar"
+    },
+    "title": {
+      "translate": "advancements.hyperl.hyphinity_wisp_jar.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.hyphinity_wisp_jar.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hyphinity_wisp_jar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hyperl:hyphinity_wisp_jar"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hyphinity_wisp_jar"
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "hyperl:hyphinity_shard",
+  "display": {
+    "icon": {
+      "item": "hyperl:hyphinity_boots"
+    },
+    "title": {
+      "translate": "advancements.hyperl.hyphinity_boots.title"
+    },
+    "description": {
+      "translate": "advancements.hyperl.hyphinity_boots.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hyphinity_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hyperl:hyphinity_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hyphinity_boots"
+    ]
+  ]
+}
