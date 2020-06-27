@@ -19,7 +19,7 @@
     "entered_hyperlane": {
       "trigger": "minecraft:changed_dimension",
       "conditions": {
-        "to": "hyperl:hyperlane"
+        "to": "hyperl:hyperlane_dim"
       }
     }
   },
